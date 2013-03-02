@@ -1,0 +1,35 @@
+<div class="span12">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span8">
+            <% @posts.each do |post| %>
+              <tr>
+                <td><b><%= post.title %></b></td><p>
+                <td><%= post.content %></td><p>
+                <td><%= link_to 'Show', post %></td>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </p>
+                <hr>
+              </tr>
+            <% end %> 
+        </div>
+        <div class="span4">
+          <% @posts.each do |post| %>
+            <tr>
+              <td><b><%= post.title %></td></b><p>
+              <td><%= link_to 'Show', post %></td>
+              <td><%= link_to 'Edit', edit_post_path(post) %></td>
+              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </p>
+            </tr>
+            <hr>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
