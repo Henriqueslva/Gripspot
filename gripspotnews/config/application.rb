@@ -9,7 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 module YourPaperclipApp
-  class Application < Rails::Application
 
         Paperclip::Railtie.insert
 end
@@ -62,5 +61,5 @@ module Gripspotnews
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
+    end
 end
