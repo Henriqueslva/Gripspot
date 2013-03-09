@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'paperclip'
+gem 'rmagick'
 gem "acl9"
 gem 'rails', '3.2.12'
 

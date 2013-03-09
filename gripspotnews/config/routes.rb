@@ -1,8 +1,10 @@
 Gripspotnews::Application.routes.draw do
-  resources :contacts
 
 
   resources :posts
+
+
+  resources :contacts
 
 
   resources :categories
