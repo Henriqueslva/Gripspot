@@ -5,7 +5,6 @@
             <% @posts.each do |post| %>
               <tr>
                 <td><b><%= post.title %></b></td><p>
-                <td><%= post.content %></td><p>
                 <td><%= link_to 'Show', post %></td>
                 <td><%= link_to 'Edit', edit_post_path(post) %></td>
                 <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

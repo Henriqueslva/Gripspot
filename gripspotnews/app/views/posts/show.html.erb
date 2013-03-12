@@ -1,27 +1,28 @@
 <p id="notice" class="label label-success"><%= notice %></p>
   <div class="container">
     <div class="row-fluid">
-      <div class="span">
-        <%= image_tag @post.photo.url(:small) %>
+      <div class="span12">
         <p>
+          <font size="6" >
           <b><%= @post.title %></b>
+        </font>
         </p>
         <p>
+          <img width="300" height="300"<%= image_tag @post.photo %>
           <%= @post.content %>
         </p>
         <p>
+          <hr>
+          <font size="2" face="verdana" color="gray">
           <b>Autor:</b>
           <%= @post.author.name %>
-        </p>
-        <p>
           <b>Categorias:</b>
           <%= @post.category.name %>
-        </p>
-        <p>
           <b>Atualizado em:</b>
           <%= @post.created_at.strftime("%d/%m/%Y - %H:%M") %>
+          </font>
+          <hr>
         </p>
-
         <%= link_to 'Edit', edit_post_path(@post) %> |
         <%= link_to 'Back', posts_path %>
       </div>
